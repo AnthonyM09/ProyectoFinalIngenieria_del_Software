@@ -1,0 +1,157 @@
+﻿@model ProyectoFinal_PVI.Models.ReservacionModel
+@{
+    ViewBag.Title = "DetalleReservacion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .leftcolumn {
+        background-color: #f7f5f5;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .rightcolumn {
+        padding: 10px;
+        border: 1px thin #e2504c;
+        
+    }
+    .contenedor {
+        border-radius: 1px;
+        height: 100%;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        margin-right: 6px;
+        overflow-x: auto;
+        transition: all .2s ease-in-out;
+    
+        top: 10%;
+        left: 30%;
+    }
+    .titulo{
+        text-align: center;
+    }
+</style>
+<h2 class="titulo">Detalle de reservación</h2>
+<div class="contenedor">
+    <table class="table-hover" width="50%" align="center">
+        <tr>
+            <td class="leftcolumn"># reservación</td>
+            <td class="rightcolumn">@Model.idReservacion</td>
+        </tr>
+        <tr>
+            <td class="leftcolumn">Hotel</td>
+            <td class="rightcolumn">@Model.nombre</td>
+        </tr>
+        <tr>
+            <td class="leftcolumn">Número de habitación</td>
+            <td class="rightcolumn">@Model.numeroHabitacion</td>
+        </tr>
+        <tr>
+            <td class="leftcolumn">Cliente</td>
+            <td class="rightcolumn">@Model.nombreCompleto</td>
+        </tr>
+        <tr>
+            <td class="leftcolumn">Fecha de entrada</td>
+            <td class="rightcolumn">@Model.fechaEntrada.ToString("dd/MM/yyyy")</td>
+        </tr>
+        <tr>
+            <td class="leftcolumn">Fecha de salida</td>
+            <td class="rightcolumn">@Model.fechaSalida.ToString("dd/MM/yyyy")</td>
+        </tr>
+        <tr>
+            <td class="leftcolumn">Número de adultos</td>
+            <td class="rightcolumn">@Model.numeroAdultos</td>
+        </tr>
+        <tr>
+            <td class="leftcolumn">Número de niños</td>
+            <td class="rightcolumn">@Model.numeroNihnos</td>
+        </tr>
+        <tr>
+            <td class="leftcolumn">Costo</td>
+            <td class="rightcolumn">@Model.costoTotal.ToString("C")</td>
+        </tr>
+    </table>
+    <br />
+    <div>
+        <div class="hijo">
+            @{
+                var sesion = (ProyectoFinal_PVI.Models.LoginModel)Session["nuevaSesion"];
+                if (sesion != null)
+                {
+
+                                if (sesion.ClienteOEmpleado == "Cliente")
+                                {
+                                    if (Model.estado == "A" && Model.fechaEntrada > DateTime.Now)
+                                    {
+                                    <div>
+                                        @Html.ActionLink("Editar reservación", "Editar", "Reservaciones", new { id = Model.idReservacion}, new { @class = "btn btn-warning" })
+                                    </div><br />
+                                            
+                                    }
+                                    if (Model.estado == "A" && Model.fechaEntrada > DateTime.Now)
+                                    {
+                                    <div>
+                                        @Html.ActionLink("Cancelar reservación", "Cancelar", "Reservaciones", new {id = Model.idReservacion }, new { @class = "btn btn-danger" })
+                                    </div><br />
+                                    }
+                                    <div>
+                                    @Html.ActionLink("Regresar", "GestionarReservaciones", "Reservaciones", null, new { @class = "btn btn-default" })
+                                    </div>
+                                }
+                                else
+                                {
+                                    if (Model.estado == "A" && Model.fechaSalida > DateTime.Now)
+                                    {
+                                    <div>
+                                        @Html.ActionLink("Editar reservación", "Editar", "Reservaciones", new { id = Model.idReservacion }, new { @class = "btn btn-warning" })
+                                    </div><br />
+                                        
+                                    }
+                                    if (Model.estado == "A" && Model.fechaEntrada > DateTime.Now)
+                                    {
+                                    <div>
+                                        @Html.ActionLink("Cancelar reservación", "Cancelar", "Reservaciones", new { id = Model.idReservacion }, new { @class = "btn btn-danger" })
+                                    </div><br />
+                                        
+                                    }
+                                    @Html.ActionLink("Regresar", "GestionarReservaciones", "Reservaciones", null, new { @class = "btn btn-default" })
+                                }    
+
+                }
+            }
+            <style>
+                .hijo {
+                    font-weight: bold;
+                    padding: .2rem;
+                    text-align: center;
+                }
+            </style>
+            
+        </div>
+         
+    </div>
+    <h2 class="titulo">Lista de acciones realizadas</h2>
+    <table class="table-striped" width="50%" height="50%" style="border-color: #f7f5f5" align="center">
+        <thead>
+            <tr>
+                <th class="rightcolumn">Fecha</th>
+                <th class="rightcolumn">Acción</th>
+                <th class="rightcolumn">Realizada por</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ProyectoFinal_PVI.Models.BitacoraModel bitacora in ViewBag.bitacora)
+            {
+                <tr>
+                    <td class="rightcolumn">@String.Format("{0:dd/MM/yyyy hh:mm}", bitacora.fechaDeLaAccion)</td>
+                    <td class="rightcolumn">@bitacora.accionRealizada</td>
+                    <td class="rightcolumn">@bitacora.nombre</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+

@@ -1,0 +1,64 @@
+﻿@model List<ProyectoFinal_PVI.Models.HabitacionModel>
+@{
+    ViewBag.Title = "Lista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .fondodiv {
+        background-image: url(../Imagenes/Fondo_Airbnb.jpg);
+        width: 100%;
+        height: 6vh;
+    }
+
+    .titulos {
+        color: #ffffff;
+        text-align: center;
+    }
+</style>
+<div class="fondodiv">
+    <h2 class="titulos">Lista de habitaciones</h2>
+</div>
+<br />
+<div>
+    @Html.ActionLink("Crear habitación", "Crear", "Habitaciones", null, new { @class = "btn btn-primary" })
+</div>
+<br />
+<div>
+    <table class="table table-striped" >
+        <thead>
+            <tr>
+                <th style="text-align: center"><strong># reservación</strong></th>
+                <th style="text-align: left"><strong>Hotel</strong></th>
+                <th style="text-align: center"><strong>Número de habitación</strong></th>
+                <th style="text-align: center"><strong>Capacidad máxima</strong></th>
+                <th style="text-align: center"><strong>Estado</strong></th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var habitacion in Model)
+            {
+                <tr>
+                    <td style="text-align: center">@habitacion.idHabitacion</td>
+                    <td style="text-align: left">@habitacion.nombre</td>
+                    <td style="text-align: center">@habitacion.numeroHabitacion</td>
+                    <td style="text-align: center">@habitacion.capacidadMaxima</td>
+                    <td style="text-align: center">@habitacion.estadoHabitacion</td>
+                    @if (habitacion.estadoHabitacion == "Inactiva")
+                    {
+                        <td>&nbsp;</td>
+                    }
+                    else
+                    {
+                        <td>
+                            @Html.ActionLink("Modificar", "Editar", "Habitaciones", new { id = habitacion.idHabitacion }, null)
+                        </td>
+                    }
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+

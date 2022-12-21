@@ -1,0 +1,60 @@
+﻿@model List<ProyectoFinal_PVI.Models.ReservacionModel>
+@{
+    ViewBag.Title = "MisReservaciones";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .fondodiv{
+        background-image: url(../Imagenes/Fondo_Airbnb.jpg); 
+        width: 100%;
+        height: 6vh;
+    } 
+    .titulos{
+        color: #ffffff;
+        text-align: center;
+    }
+</style>
+
+<div>
+
+</div>
+<br />
+<div>
+    @Html.ActionLink("Nueva reservación", "Crear", "Reservaciones", null, new { @class = "btn btn-primary" })
+</div><br />
+<div class="fondodiv">
+    <h2 class="titulos">Mis reservaciones</h2>
+</div>
+<br />
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th style="text-align: center"><strong># reservación</strong></th>
+                <th style="text-align: left"><strong>Hotel</strong></th>
+                <th style="text-align: center"><strong>Fecha entrada</strong></th>
+                <th style="text-align: center"><strong>Fecha salida</strong></th>
+                <th style="text-align: right"><strong>Costo</strong></th>
+                <th style="text-align: center"><strong>Estado</strong></th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var reservacion in Model)
+            {
+                <tr>
+                    <td style="text-align: center">@reservacion.idReservacion</td>
+                    <td style="text-align: left">@reservacion.nombre</td>
+                    <td style="text-align: center">@String.Format("{0:dd/MM/yyyy}", reservacion.fechaEntrada)</td>
+                    <td style="text-align: center">@String.Format("{0:dd/MM/yyyy}", reservacion.fechaSalida)</td>
+                    <td style="text-align: right">@reservacion.costoTotal.ToString("C")</td>
+                    <td style="text-align: center">@reservacion.estadoActual</td>
+                    <td>
+                        @Html.ActionLink("Consultar", "DetalleReservacion", "Reservaciones", new { id = reservacion.idReservacion }, null)
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,59 @@
+﻿@model ProyectoFinal_PVI.Models.LoginModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="~/Estilos/Estilos.css" rel="stylesheet" type="text/css" />
+
+    <title>Inicio de sesión</title>
+
+</head>
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar sesión</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    @using (Html.BeginForm("IniciarSesion", "Login", FormMethod.Post))
+                    {
+
+                        <div class="group">
+                            @Html.LabelFor(l => l.email, new { @class = "label" })
+                            @Html.TextBoxFor(l => l.email, new { @class = "input", id = "user" })
+                            @Html.ValidationMessageFor(l => l.email)
+                        </div>
+                        <div class="group">
+                            @Html.LabelFor(l => l.clave, new { @class = "label" })
+                            @Html.PasswordFor(l => l.clave, new { @class = "input", id = "pass" })
+                            @Html.ValidationMessageFor(l => l.clave)
+                        </div>
+                        <div class="group">
+                            <input id="check" type="checkbox" class="check" checked>
+                            <label for="check"><span class="icon"></span> Mantener sesión iniciada</label>
+                        </div>
+                        <div class="group">
+                            <input type="submit" class="button" value="Iniciar sesión">
+                        </div>
+                    }
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <a href="#forgot">¿Olvido su contraseña?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+        <div>@Html.Raw(TempData["msg"])</div>
+
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+﻿@model ProyectoFinal_PVI.Models.HabitacionModel
+@{
+    ViewBag.Title = "Formulario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string tituloDePagina = "Crear habitación";
+    string accionDeFormulario = "Crear";
+    if (Model.idHabitacion > 0)
+    {
+        tituloDePagina = "Editar habitación";
+        accionDeFormulario = "Editar";
+    }
+
+}
+<h2>@tituloDePagina</h2>
+<div class="form-group">
+    @using (Html.BeginForm(accionDeFormulario, "Habitaciones", FormMethod.Post))
+    {
+        @Html.HiddenFor(h => h.idHabitacion)
+
+        @Html.Label("Hotel")<br />
+        if (accionDeFormulario == "Crear")
+        {
+            @Html.DropDownListFor(h => h.idHotel, new SelectList(ViewBag.listahotel, "idHotel", "nombre"), "Seleccione un hotel", new { @class = "form-control" })
+            @Html.ValidationMessageFor(h => h.idHotel, "", new { @class = "text-danger" }) }
+        else
+        {
+            @Html.HiddenFor(h => h.idHotel)
+            @Html.TextBoxFor(h => h.nombre, new { @class = "form-control", @readonly = "true" })
+        }
+
+
+        <br />
+        @Html.LabelFor(h => h.numeroHabitacion)<br />
+        @Html.TextBoxFor(h => h.numeroHabitacion, new { @class = "form-control" })
+        @Html.ValidationMessageFor(h => h.numeroHabitacion, "", new { @class = "text-danger" })
+        <br />
+        @Html.LabelFor(h => h.capacidadMaxima)<br />
+        @Html.TextBoxFor(h => h.capacidadMaxima, new { @class = "form-control", type = "number" })
+        @Html.ValidationMessageFor(h => h.capacidadMaxima, "", new { @class = "text-danger" })
+        <br />
+        @Html.LabelFor(h => h.descripcion)<br />
+        @Html.TextAreaFor(h => h.descripcion, new { @class = "form-control" })
+        @Html.ValidationMessageFor(h => h.descripcion, "", new { @class = "text-danger" })
+        <br />
+        <div>
+            <input type="submit" id="btnGuardar" value="Guardar" class="btn btn-primary" />
+            @if (accionDeFormulario == "Editar")
+            {
+                @Html.ActionLink("Inactivar", "InactivarHabitacion", "Habitaciones", new { id = Model.idHabitacion }, new { @class = "btn btn-danger" })
+            }
+            @Html.ActionLink("Regresar", "Habitaciones", "Habitaciones", null, new { @class = "btn btn-default" })
+        </div>
+
+    }
+    <div>
+        @Html.Raw(TempData["msg"])
+    </div>
+</div>
+

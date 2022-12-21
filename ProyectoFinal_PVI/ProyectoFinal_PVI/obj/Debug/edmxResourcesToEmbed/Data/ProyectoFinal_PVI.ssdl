@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PVI_ProyectoFinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <Function Name="ConsultarUltimaReservacionRealizada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="EditarReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idReservacion" Type="int" Mode="In" />
+    <Parameter Name="fechaEntrada" Type="datetime" Mode="In" />
+    <Parameter Name="fechaSalida" Type="datetime" Mode="In" />
+    <Parameter Name="numeroAdultos" Type="int" Mode="In" />
+    <Parameter Name="numeroNinhos" Type="int" Mode="In" />
+    <Parameter Name="totalDiasReservacion" Type="int" Mode="In" />
+    <Parameter Name="costoPorCadaAdulto" Type="numeric" Mode="In" />
+    <Parameter Name="costoPorCadaNinho" Type="numeric" Mode="In" />
+    <Parameter Name="costoTotal" Type="numeric" Mode="In" />
+    <Parameter Name="fechaModificacion" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="pa_CancelarReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idReservacion" Type="int" Mode="In" />
+    <Parameter Name="fechaModificacion" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarAccionesRealizadasPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdReservaciones" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarDetalleReservacionPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdReservacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarDetalleReservacionPorIdB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdReservacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarHabitacionConReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarHabitaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="pa_ConsultarHabitacionesPorIdHotel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarHabitacionPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHabitacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarHabitacionSinReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+    <Parameter Name="capacidadMaxima" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarHoteles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="pa_ConsultarIdDeHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarIdReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idReservacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarNumerodeHabitaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarPersonas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="pa_ConsultarPreciosPorIdHotel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarReservaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="pa_ConsultarReservacionesFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPersona" Type="int" Mode="In" />
+    <Parameter Name="fechaEntrada" Type="datetime" Mode="In" />
+    <Parameter Name="fechaSalida" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarReservacionesPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPersona" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pa_ConsultarReservacionPorNumeroHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHabitacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pa_CrearHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+    <Parameter Name="capacidadMaxima" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pa_CrearRegistroBitacora" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idReservacion" Type="int" Mode="In" />
+    <Parameter Name="idPersona" Type="int" Mode="In" />
+    <Parameter Name="accionRealizada" Type="varchar" Mode="In" />
+    <Parameter Name="fechaDeLaAccion" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="pa_CrearReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPersona" Type="int" Mode="In" />
+    <Parameter Name="idHabitacion" Type="int" Mode="In" />
+    <Parameter Name="fechaEntrada" Type="datetime" Mode="In" />
+    <Parameter Name="fechaSalida" Type="datetime" Mode="In" />
+    <Parameter Name="numeroAdultos" Type="int" Mode="In" />
+    <Parameter Name="numeroNinhos" Type="int" Mode="In" />
+    <Parameter Name="totalDiasReservacion" Type="int" Mode="In" />
+    <Parameter Name="costoPorCadaAdulto" Type="numeric" Mode="In" />
+    <Parameter Name="costoPorCadaNinho" Type="numeric" Mode="In" />
+    <Parameter Name="costoTotal" Type="numeric" Mode="In" />
+    <Parameter Name="fechaCreacion" Type="datetime" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pa_EditarHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHabitacion" Type="int" Mode="In" />
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+    <Parameter Name="capacidadMaxima" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pa_InactivarHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHabitacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pa_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="correo" Type="varchar" Mode="In" />
+    <Parameter Name="clave" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="PVI_ProyectoFinalModelStoreContainer" />
+</Schema>

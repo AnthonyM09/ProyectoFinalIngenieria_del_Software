@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PVI_ProyectoFinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bitacora">
+    <Key>
+      <PropertyRef Name="idBitacora" />
+    </Key>
+    <Property Name="idBitacora" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idReservacion" Type="int" Nullable="false" />
+    <Property Name="idPersona" Type="int" Nullable="false" />
+    <Property Name="accionRealizada" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="fechaDeLaAccion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Habitacion">
+    <Key>
+      <PropertyRef Name="idHabitacion" />
+    </Key>
+    <Property Name="idHabitacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idHotel" Type="int" Nullable="false" />
+    <Property Name="numeroHabitacion" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="capacidadMaxima" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hotel">
+    <Key>
+      <PropertyRef Name="idHotel" />
+    </Key>
+    <Property Name="idHotel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="500" />
+    <Property Name="costoPorCadaAdulto" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="costoPorCadaNinho" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="idPersona" />
+    </Key>
+    <Property Name="idPersona" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreCompleto" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="clave" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="esEmpleado" Type="bit" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reservacion">
+    <Key>
+      <PropertyRef Name="idReservacion" />
+    </Key>
+    <Property Name="idReservacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idPersona" Type="int" Nullable="false" />
+    <Property Name="idHabitacion" Type="int" Nullable="false" />
+    <Property Name="fechaEntrada" Type="datetime" Nullable="false" />
+    <Property Name="fechaSalida" Type="datetime" Nullable="false" />
+    <Property Name="numeroAdultos" Type="int" Nullable="false" />
+    <Property Name="numeroNinhos" Type="int" Nullable="false" />
+    <Property Name="totalDiasReservacion" Type="int" Nullable="false" />
+    <Property Name="costoPorCadaAdulto" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="costoPorCadaNinho" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="costoTotal" Type="numeric" Precision="14" Scale="2" Nullable="false" />
+    <Property Name="fechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="fechaModificacion" Type="datetime" />
+    <Property Name="estado" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Bitacora_Persona">
+    <End Role="Persona" Type="Self.Persona" Multiplicity="1" />
+    <End Role="Bitacora" Type="Self.Bitacora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="idPersona" />
+      </Principal>
+      <Dependent Role="Bitacora">
+        <PropertyRef Name="idPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bitacora_Reservacion">
+    <End Role="Reservacion" Type="Self.Reservacion" Multiplicity="1" />
+    <End Role="Bitacora" Type="Self.Bitacora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reservacion">
+        <PropertyRef Name="idReservacion" />
+      </Principal>
+      <Dependent Role="Bitacora">
+        <PropertyRef Name="idReservacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Habitacion_Hotel">
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="1" />
+    <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="idHotel" />
+      </Principal>
+      <Dependent Role="Habitacion">
+        <PropertyRef Name="idHotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservacion_Habitacion">
+    <End Role="Habitacion" Type="Self.Habitacion" Multiplicity="1" />
+    <End Role="Reservacion" Type="Self.Reservacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Habitacion">
+        <PropertyRef Name="idHabitacion" />
+      </Principal>
+      <Dependent Role="Reservacion">
+        <PropertyRef Name="idHabitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reservacion_Persona">
+    <End Role="Persona" Type="Self.Persona" Multiplicity="1" />
+    <End Role="Reservacion" Type="Self.Reservacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="idPersona" />
+      </Principal>
+      <Dependent Role="Reservacion">
+        <PropertyRef Name="idPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="spCancelarReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idReservacion" Type="int" Mode="In" />
+    <Parameter Name="fechaModificacion" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spConsultarAccionesRealizadasPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdReservaciones" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarDetalleReservacionPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdReservacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarDetalleReservacionPorIdB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdReservacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarHabitacionConReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spConsultarHabitaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spConsultarHabitacionesPorIdHotel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spConsultarHabitacionPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHabitacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarHabitacionSinReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+    <Parameter Name="capacidadMaxima" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarHoteles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spConsultarIdDeHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spConsultarIdReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idReservacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarNumerodeHabitaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spConsultarPersonas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spConsultarPreciosPorIdHotel" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarReservaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spConsultarReservacionesFiltro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPersona" Type="int" Mode="In" />
+    <Parameter Name="fechaEntrada" Type="datetime" Mode="In" />
+    <Parameter Name="fechaSalida" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spConsultarReservacionesPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPersona" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarReservacionPorNumeroHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHabitacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spConsultarUltimaReservacionRealizada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spCrearHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+    <Parameter Name="capacidadMaxima" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spCrearRegistroBitacora" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idReservacion" Type="int" Mode="In" />
+    <Parameter Name="idPersona" Type="int" Mode="In" />
+    <Parameter Name="accionRealizada" Type="varchar" Mode="In" />
+    <Parameter Name="fechaDeLaAccion" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spCrearReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPersona" Type="int" Mode="In" />
+    <Parameter Name="idHabitacion" Type="int" Mode="In" />
+    <Parameter Name="fechaEntrada" Type="datetime" Mode="In" />
+    <Parameter Name="fechaSalida" Type="datetime" Mode="In" />
+    <Parameter Name="numeroAdultos" Type="int" Mode="In" />
+    <Parameter Name="numeroNinhos" Type="int" Mode="In" />
+    <Parameter Name="totalDiasReservacion" Type="int" Mode="In" />
+    <Parameter Name="costoPorCadaAdulto" Type="numeric" Mode="In" />
+    <Parameter Name="costoPorCadaNinho" Type="numeric" Mode="In" />
+    <Parameter Name="costoTotal" Type="numeric" Mode="In" />
+    <Parameter Name="fechaCreacion" Type="datetime" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spEditarHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHabitacion" Type="int" Mode="In" />
+    <Parameter Name="idHotel" Type="int" Mode="In" />
+    <Parameter Name="numeroHabitacion" Type="varchar" Mode="In" />
+    <Parameter Name="capacidadMaxima" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spEditarReservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idReservacion" Type="int" Mode="In" />
+    <Parameter Name="fechaEntrada" Type="datetime" Mode="In" />
+    <Parameter Name="fechaSalida" Type="datetime" Mode="In" />
+    <Parameter Name="numeroAdultos" Type="int" Mode="In" />
+    <Parameter Name="numeroNinhos" Type="int" Mode="In" />
+    <Parameter Name="totalDiasReservacion" Type="int" Mode="In" />
+    <Parameter Name="costoPorCadaAdulto" Type="numeric" Mode="In" />
+    <Parameter Name="costoPorCadaNinho" Type="numeric" Mode="In" />
+    <Parameter Name="costoTotal" Type="numeric" Mode="In" />
+    <Parameter Name="fechaModificacion" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="spInactivarHabitacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idHabitacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="correo" Type="varchar" Mode="In" />
+    <Parameter Name="clave" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="PVI_ProyectoFinalModelStoreContainer">
+    <EntitySet Name="Bitacora" EntityType="Self.Bitacora" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Habitacion" EntityType="Self.Habitacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hotel" EntityType="Self.Hotel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persona" EntityType="Self.Persona" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reservacion" EntityType="Self.Reservacion" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Bitacora_Persona" Association="Self.FK_Bitacora_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Bitacora" EntitySet="Bitacora" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bitacora_Reservacion" Association="Self.FK_Bitacora_Reservacion">
+      <End Role="Reservacion" EntitySet="Reservacion" />
+      <End Role="Bitacora" EntitySet="Bitacora" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Habitacion_Hotel" Association="Self.FK_Habitacion_Hotel">
+      <End Role="Hotel" EntitySet="Hotel" />
+      <End Role="Habitacion" EntitySet="Habitacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservacion_Habitacion" Association="Self.FK_Reservacion_Habitacion">
+      <End Role="Habitacion" EntitySet="Habitacion" />
+      <End Role="Reservacion" EntitySet="Reservacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reservacion_Persona" Association="Self.FK_Reservacion_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Reservacion" EntitySet="Reservacion" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

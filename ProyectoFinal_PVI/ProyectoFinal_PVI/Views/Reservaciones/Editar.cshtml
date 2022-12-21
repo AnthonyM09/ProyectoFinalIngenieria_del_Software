@@ -1,0 +1,69 @@
+﻿@model  ProyectoFinal_PVI.Models.ReservacionModel
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ProyectoFinal_PVI.Models.LoginModel sesion = null;
+    if (Session["nuevaSesion"] != null)
+    {
+        sesion = (ProyectoFinal_PVI.Models.LoginModel)Session["nuevaSesion"];
+    }
+}
+
+<h2>Modificar reservación</h2>
+<div>
+    @using (Html.BeginForm("Editar", "Reservaciones", FormMethod.Post))
+    {
+        @Html.HiddenFor(r => r.idReservacion)
+
+        @Html.HiddenFor(r => r.idHotel)
+        @Html.LabelFor(r => r.nombre)
+        @Html.TextBoxFor(r => r.nombre, new { @class = "form-control", @readonly = "true" })
+
+        @Html.HiddenFor(r => r.idHabitacion)
+        @Html.LabelFor(r => r.numeroHabitacion)
+        @Html.TextBoxFor(r => r.numeroHabitacion, new { @class = "form-control", @readonly = "true" })
+
+        @Html.HiddenFor(r => r.idPersona)
+        @Html.LabelFor(r => r.nombreCompleto)
+        @Html.TextBoxFor(r => r.nombreCompleto, new { @class = "form-control", @readonly = "true" })<br />
+        
+       
+            @Html.LabelFor(r => r.fechaEntrada)<br />
+            @Html.TextBoxFor(r => r.fechaEntrada, "{0:yyyy-MM-dd}", new { type = "date", @class = "form-control" })
+            @Html.ValidationMessageFor(r => r.fechaEntrada, "", new { @class = "text-danger" })<br />
+        
+
+
+
+        @Html.LabelFor(r => r.fechaSalida)<br />
+        @Html.TextBoxFor(r => r.fechaSalida, "{0:yyyy-MM-dd}", new { type = "date", @class = "form-control" })
+        @Html.ValidationMessageFor(r => r.fechaSalida, "", new { @class = "text-danger" })<br />
+
+        @Html.LabelFor(r => r.numeroAdultos)<br />
+        @Html.TextBoxFor(r => r.numeroAdultos, new { type = "number", @class = "form-control" })
+        @Html.ValidationMessageFor(r => r.numeroAdultos, "", new { @class = "text-danger" })<br />
+
+        @Html.LabelFor(r => r.numeroNihnos)<br />
+        @Html.TextBoxFor(r => r.numeroNihnos, new { type = "number", @class = "form-control" })
+        @Html.ValidationMessageFor(r => r.numeroNihnos, "", new { @class = "text-danger" })<br />
+        <div>
+            @if (sesion.ClienteOEmpleado == "Empleado")
+            {
+                <input type="submit" id="btnGuardar" value="Guardar" class="btn btn-primary" />
+                @Html.ActionLink("Regresar", "GestionarReservaciones", "Reservaciones", null, new { @class = "btn btn-default" })
+            }
+            else
+            {
+                <input type="submit" id="btnGuardar" value="Guardar" class="btn btn-primary" />
+                @Html.ActionLink("Regresar", "Reservaciones", "Reservaciones", null, new { @class = "btn btn-default" })
+            }
+
+        </div>
+
+    }
+</div>
+<div>@Html.Raw(TempData["msg"])</div>
+

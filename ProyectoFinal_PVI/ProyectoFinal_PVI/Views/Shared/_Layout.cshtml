@@ -1,0 +1,157 @@
+﻿@{
+    ProyectoFinal_PVI.Models.LoginModel sesion = null;
+    if (Session["nuevaSesion"] != null)
+    {
+        sesion = (ProyectoFinal_PVI.Models.LoginModel)Session["nuevaSesion"];
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <img src="~/Imagenes/logo_airbnb.png" width="150" height="50">
+                    </li>
+                    @{
+                        if (sesion != null)
+                        {
+                            if (sesion.ClienteOEmpleado == "Cliente")
+                            {
+                                <li><a style="color: #ffffff">@sesion.nombreCompleto</a></li>                               
+                                <li>@Html.ActionLink("Mis reservaciones", "Reservaciones", "Reservaciones")</li>
+                                <li><a href="~/Login/Salir" onclick="return confirm('¿Quieres cerrar la sesión?')">Cerrar sesión</a></li>
+                            }
+                            else
+                            {
+                                <li><a style="color: #ffffff">@sesion.nombreCompleto</a></li>
+                                <li>@Html.ActionLink("Mis reservaciones", "Reservaciones", "Reservaciones")</li>
+                                <li>@Html.ActionLink("Gestionar reservaciones", "GestionarReservaciones", "Reservaciones")</li>
+                                <li>@Html.ActionLink("Gestionar habitación", "Habitaciones", "Habitaciones")</li>
+                                <li><a href="~/Login/Salir" onclick="return confirm('¿Quieres cerrar la sesión?')">Cerrar sesión</a></li>                          
+                            }
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer style="background-color: #f7f5f5">
+            <table class="table-condensed" width="100%">
+                <thead>
+                    <tr>
+                        <th>ACERDA DE</th>
+                        <th>COMINIDAD</th>
+                        <th>ANFITRIÓN</th>
+                        <th>ASISTENCIA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a class="link">Cómo funciona Airbnb</a></td>
+                        <td><a class="link">Diversidad e inclusión</a></td>
+                        <td><a class="link">Recibe huéspedes en tu hogar</a></td>
+                        <td><a class="link">Nuestra respuesta frente a la COVID-19</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="link">Sala de prensa</a></td>
+                        <td><a class="link">Accesibilidad</a></td>
+                        <td><a class="link">Ofrece una experiencia en línea</a></td>
+                        <td><a class="link">Centro de ayuda</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="link">Airbnb 2021</a></td>
+                        <td><a class="link">Colaboradores de Airbnb</a></td>
+                        <td><a class="link">Organiza una experiencia</a></td>
+                        <td><a class="link">Opciones de cancelación</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="link">Inversionistas</a></td>
+                        <td><a class="link">Alojamientos para Personal de Emergencia COVID-19</a></td>
+                        <td><a class="link">Ser un anfitrión responsable</a></td>
+                        <td><a class="link">Asistencia al vecindario</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="link">Airbnb Plus</a></td>
+                        <td><a class="link">Invitaciones para huéspedes</a></td>
+                        <td><a class="link">Centro de recursos</a></td>
+                        <td><a class="link">Confianza y seguridad</a></td>
+                    </tr>
+                    <tr>
+                        <td><a class="link">Airbnb Luxe</a></td>
+                        <td><a class="link">Airbnb.org</a></td>
+                        <td><a class="link">Centro de la comunidad</a></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link">Los anfitriones lo hacen posible</a></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link">Carreras</a></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a class="link">Carta de los fundadores</a></td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <table class="table-condensed" width="100%">
+                <tr>
+                    <td><strong>&copy; @DateTime.Now.Year Airbnb, Inc.</strong>·<a class="link">Privacidad</a>·<a class="link">Términos</a>·<a class="link">Mapa del sitio</a></td>
+                    <td>
+                        <img src="~/Imagenes/logo_facebook.png" width="20" height="27" />                   
+                    </td>
+                    <td>
+                        <img src="~/Imagenes/logo_instagram.png" width="20" height="27" />
+                    </td>
+                    <td>
+                        <img src="~/Imagenes/logo_twitter.png" width="20" height="27" />
+                    </td>
+                </tr>
+            </table>
+            <style>
+                .link {
+                    color: black
+                }
+                .link:hover {
+                    color: #e2504c;
+                }
+            </style>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,241 @@
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.dll.config
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.pdb
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.exe
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.exe.config
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.rsp
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csi.exe
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csi.rsp
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.AppContext.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.exe
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.exe.config
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.rsp
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\VBCSCompiler.exe
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Antlr3.Runtime.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.SqlServer.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Newtonsoft.Json.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Helpers.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Mvc.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Optimization.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Razor.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\WebGrease.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.xml
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.SqlServer.xml
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Helpers.xml
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Mvc.xml
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Optimization.xml
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Razor.xml
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.xml
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Newtonsoft.Json.xml
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Antlr3.Runtime.pdb
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csproj.CoreCompileInputs.cache
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csproj.CopyComplete
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.dll
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.pdb
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csprojAssemblyReference.cache
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csproj.CoreCompileInputs.cache
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.pdb
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.dll.config
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.pdb
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.exe
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.exe.config
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.rsp
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csi.exe
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csi.rsp
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.AppContext.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Collections.Immutable.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.IO.FileSystem.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Reflection.Metadata.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.exe
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.exe.config
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.rsp
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\VBCSCompiler.exe
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\VBCSCompiler.exe.config
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Antlr3.Runtime.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.SqlServer.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.Web.Infrastructure.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Newtonsoft.Json.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Helpers.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Mvc.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Optimization.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Razor.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Deployment.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Razor.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\WebGrease.dll
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.xml
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.SqlServer.xml
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Helpers.xml
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Mvc.xml
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Optimization.xml
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Razor.xml
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.xml
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Deployment.xml
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Razor.xml
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Newtonsoft.Json.xml
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Antlr3.Runtime.pdb
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\Mi unidad\David\2 cuatrimestre 2021\Progamación VI\Proyecto final\Código fuente versión 1.0\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csproj.CopyComplete
+C:\Users\Elmer Chavarria\source\repos\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csprojAssemblyReference.cache
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.dll.config
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.pdb
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.exe
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.exe.config
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.rsp
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csi.exe
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csi.rsp
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.AppContext.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.exe
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.exe.config
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.rsp
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\VBCSCompiler.exe
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Antlr3.Runtime.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.SqlServer.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Newtonsoft.Json.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Helpers.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Mvc.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Optimization.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Razor.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\WebGrease.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.xml
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.SqlServer.xml
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Helpers.xml
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Mvc.xml
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Optimization.xml
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Razor.xml
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.xml
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Newtonsoft.Json.xml
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Antlr3.Runtime.pdb
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csprojAssemblyReference.cache
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csproj.CoreCompileInputs.cache
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csproj.CopyComplete
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.dll
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.pdb
+C:\Users\Elmer Chavarria\source\repos\Proga VI\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csproj.AssemblyReference.cache
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csproj.AssemblyReference.cache
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csproj.CoreCompileInputs.cache
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.pdb
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.dll.config
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\ProyectoFinal_PVI.pdb
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.exe
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.exe.config
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csc.rsp
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csi.exe
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\csi.rsp
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.AppContext.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Collections.Immutable.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.IO.FileSystem.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\System.Reflection.Metadata.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.exe
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.exe.config
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\vbc.rsp
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\VBCSCompiler.exe
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\roslyn\VBCSCompiler.exe.config
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Antlr3.Runtime.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.SqlServer.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.Web.Infrastructure.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Newtonsoft.Json.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Helpers.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Mvc.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Optimization.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Razor.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Deployment.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Razor.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\WebGrease.dll
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.xml
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\EntityFramework.SqlServer.xml
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Helpers.xml
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Mvc.xml
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Optimization.xml
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.Razor.xml
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.xml
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Deployment.xml
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\System.Web.WebPages.Razor.xml
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Newtonsoft.Json.xml
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Antlr3.Runtime.pdb
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\progra6\ProyectoFinal_PVI\ProyectoFinal_PVI\ProyectoFinal_PVI\obj\Debug\ProyectoFinal_PVI.csproj.CopyComplete

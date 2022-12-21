@@ -1,0 +1,40 @@
+﻿@model ProyectoFinal_PVI.Models.HabitacionModel
+@{
+    ViewBag.Title = "Resultado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .rightcolumn {
+        background-color: cadetblue;
+        padding: 10px;
+        height: 50%
+    }
+
+    .lefcolumn {
+        padding: 10px;
+        height: 50%
+    }
+</style>
+<br />
+<div class="alert-success" style="width : 40%">
+    @ViewBag.mensaje
+</div>
+<br />
+<table class="table-hover" height="40%">
+    <tr>
+        <td class="rightcolumn">Habitación</td>
+        <td class="lefcolumn">@Model.numeroHabitacion</td>
+    </tr>
+    <tr>
+        <td class="rightcolumn">Capacidad máxima</td>
+        <td class="lefcolumn">@Model.capacidadMaxima</td>
+    </tr>
+    <tr>
+        <td class="rightcolumn">Descripción</td>
+        <td class="lefcolumn">@Model.descripcion</td>
+    </tr>
+
+</table>
+<br />
+@Html.ActionLink("Regresar", "Habitaciones", "Habitaciones", null, new { @class = "btn btn-default" })
+

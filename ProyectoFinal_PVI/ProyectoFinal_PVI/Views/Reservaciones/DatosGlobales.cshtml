@@ -1,0 +1,103 @@
+﻿@model ProyectoFinal_PVI.Models.ReservacionModel
+@{
+    ViewBag.Title = "DatosGlobales";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .filtro{
+        padding : 10px;
+    }
+    .fondodiv {
+        background-image: url(../Imagenes/Fondo_Airbnb.jpg);
+        width: 100%;
+        height: 6vh;
+    }
+
+    .titulos {
+        color: #ffffff;
+        text-align: center;
+    }
+</style>
+<div class="fondodiv">
+    <h2 class="titulos">Gestionar reservaciones</h2>
+</div>
+
+<br />
+<table style="padding : 10px">   
+        @using (Html.BeginForm("Buscar", "Reservaciones", FormMethod.Post))
+        {
+            <thead>
+                <tr>
+                    <th style="text-align: center">Nombre</th>
+                    <th style="text-align: center">@Html.LabelFor(r => r.fechaEntrada)</th>
+                    <th style="text-align: center">@Html.LabelFor(r => r.fechaSalida)</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="filtro">
+                        @Html.DropDownListFor(r => r.idPersona, new SelectList(ViewBag.listaclientes, "idPersona", "nombreCompleto"), "Seleccione una cliente", new { @class = "form-control" })                       
+                    </td>
+                    <td>           
+                        @Html.EditorFor(r => r.fechaEntrada, new { htmlAttributes = new { @class = "form-control", placeholder = "Fecha de entrada" } })                 
+                        
+                    </td>
+                    <td class="filtro">
+                        @Html.EditorFor(r => r.fechaSalida, new { htmlAttributes = new { @class = "form-control", placeholder = "Fecha de salida" } })                       
+                    </td>
+                    <td class="filtro">
+                        <input type="submit" id="btnBuscar" value="Filtrar" class="btn btn-primary" />
+                        @Html.ActionLink("Limpiar", "GestionarReservaciones", "Reservaciones", null, new { @class = "btn btn-default" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="filtro">@Html.ValidationMessageFor(r => r.fechaEntrada, "", new { @class = "text-danger" })   </td>
+                    <td class="filtro">@Html.ValidationMessageFor(r => r.fechaSalida, "", new { @class = "text-danger" })</td>
+                </tr>
+            </tbody>                     
+        }  
+</table>
+<div class="alert-danger" style="width: 36%">
+    @ViewBag.mensaje
+</div>
+<br />
+<div>
+    @Html.ActionLink("Nueva reservación", "Crear", "Reservaciones", null, new { @class = "btn btn-primary" })
+</div>
+<br />
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th style="text-align: center"><strong># reservación</strong></th>
+                <th style="text-align: left"><strong>Cliente</strong></th>
+                <th style="text-align: left"><strong>Hotel</strong></th>
+                <th style="text-align: center"><strong>Fecha entrada</strong></th>
+                <th style="text-align: center"><strong>Fecha salida</strong></th>
+                <th style="text-align: right"><strong>Costo</strong></th>
+                <th style="text-align: center"><strong>Estado</strong></th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ProyectoFinal_PVI.Models.ReservacionModel reservacion in ViewBag.query)
+            {
+                <tr>
+                    <td style="text-align: center">@reservacion.idReservacion</td>
+                    <td style="text-align: left">@reservacion.nombreCompleto</td>
+                    <td style="text-align: left">@reservacion.nombre</td>
+                    <td style="text-align: center">@String.Format("{0:dd/MM/yyyy}", reservacion.fechaEntrada)</td>
+                    <td style="text-align: center">@String.Format("{0:dd/MM/yyyy}", reservacion.fechaSalida)</td>
+                    <td style="text-align: right">@reservacion.costoTotal.ToString("C")</td>
+                    <td style="text-align: center">@reservacion.estadoActual</td>
+                    <td>
+                        @Html.ActionLink("Consultar", "DetalleReservacion", "Reservaciones", new { id = reservacion.idReservacion }, null)
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>

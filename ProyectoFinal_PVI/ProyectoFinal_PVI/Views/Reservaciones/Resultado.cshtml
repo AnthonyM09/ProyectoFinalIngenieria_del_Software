@@ -1,0 +1,63 @@
+﻿@{
+    ProyectoFinal_PVI.Models.LoginModel sesion = null;
+    if (Session["nuevaSesion"] != null)
+    {
+        sesion = (ProyectoFinal_PVI.Models.LoginModel)Session["nuevaSesion"];
+    }
+}
+
+@model ProyectoFinal_PVI.Models.ReservacionModel
+@{
+    ViewBag.Title = "Resultado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .rightcolumn {
+        background-color: cadetblue;
+        padding: 10px;
+        height: 50%
+    }
+
+    .lefcolumn {
+        padding: 10px;
+        height: 50%
+    }
+</style>
+<br />
+<div class="alert-success" style="width : 40%">
+    @ViewBag.mensaje
+</div>
+<br />
+<table class="table-hover" height="40%">
+    <tr>
+        <td class="rightcolumn">Número de habitación</td>
+        <td class="lefcolumn">@Model.numeroHabitacion</td>
+    </tr>
+    <tr>
+        <td class="rightcolumn">Fecha de entrada</td>
+        <td class="lefcolumn">@Model.fechaEntrada.ToString("dd/MM/yyyy")</td>
+    </tr>
+    <tr>
+        <td class="rightcolumn">Fecha de salida</td>
+        <td class="lefcolumn">@Model.fechaSalida.ToString("dd/MM/yyyy")</td>
+    </tr>
+    <tr>
+        <td class="rightcolumn">Acción realizada</td>
+        <td class="lefcolumn">@Model.accionRealizada</td>
+    </tr>
+</table>
+<br />
+    @{ 
+        if(sesion != null)
+        {
+            if(sesion.ClienteOEmpleado == "Empleado")
+            {
+                @Html.ActionLink("Regresar", "GestionarReservaciones", "Reservaciones", null, new { @class = "btn btn-default" })
+            }
+            else
+            {
+                @Html.ActionLink("Regresar", "Reservaciones", "Reservaciones", null, new { @class = "btn btn-default" })
+            }
+        }
+    }
+

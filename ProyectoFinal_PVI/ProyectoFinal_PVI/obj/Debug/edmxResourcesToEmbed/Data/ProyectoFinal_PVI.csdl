@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PVI_ProyectoFinalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="PVI_ProyectoFinalEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="pa_ConsultarPersonas" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarPersonas_Result)" />
+    <FunctionImport Name="pa_ConsultarReservacionesPorId" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarReservacionesPorId_Result)">
+      <Parameter Name="IdPersona" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pa_Login" ReturnType="Collection(PVI_ProyectoFinalModel.pa_Login_Result)">
+      <Parameter Name="correo" Mode="In" Type="String" />
+      <Parameter Name="clave" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarReservaciones" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarReservaciones_Result)" />
+    <FunctionImport Name="pa_ConsultarIdReservacion" ReturnType="Collection(Int32)">
+      <Parameter Name="idReservacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pa_CrearHabitacion">
+      <Parameter Name="idHotel" Mode="In" Type="Int32" />
+      <Parameter Name="numeroHabitacion" Mode="In" Type="String" />
+      <Parameter Name="capacidadMaxima" Mode="In" Type="Int32" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="estado" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarDetalleReservacionPorIdB" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarDetalleReservacionPorIdB_Result)">
+      <Parameter Name="IdReservacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarHabitacionPorId" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarHabitacionPorId_Result1)">
+      <Parameter Name="idHabitacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pa_EditarHabitacion">
+      <Parameter Name="idHabitacion" Mode="In" Type="Int32" />
+      <Parameter Name="idHotel" Mode="In" Type="Int32" />
+      <Parameter Name="numeroHabitacion" Mode="In" Type="String" />
+      <Parameter Name="capacidadMaxima" Mode="In" Type="Int32" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="estado" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarReservacionesFiltro" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarReservacionesFiltro_Result3)">
+      <Parameter Name="IdPersona" Mode="In" Type="Int32" />
+      <Parameter Name="fechaEntrada" Mode="In" Type="DateTime" />
+      <Parameter Name="fechaSalida" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarHabitacionesPorIdHotel" ReturnType="Collection(String)">
+      <Parameter Name="idHotel" Mode="In" Type="Int32" />
+      <Parameter Name="numeroHabitacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarHabitacionConReservacion" ReturnType="Collection(String)">
+      <Parameter Name="idHotel" Mode="In" Type="Int32" />
+      <Parameter Name="numeroHabitacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarPreciosPorIdHotel" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarPreciosPorIdHotel_Result)">
+      <Parameter Name="idHotel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarHoteles" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarHoteles_Result2)" />
+    <FunctionImport Name="pa_CrearRegistroBitacora">
+      <Parameter Name="idReservacion" Mode="In" Type="Int32" />
+      <Parameter Name="idPersona" Mode="In" Type="Int32" />
+      <Parameter Name="accionRealizada" Mode="In" Type="String" />
+      <Parameter Name="fechaDeLaAccion" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarIdDeHabitacion" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarIdDeHabitacion_Result)">
+      <Parameter Name="numeroHabitacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarUltimaReservacionRealizada" ReturnType="Collection(PVI_ProyectoFinalModel.ConsultarUltimaReservacionRealizada_Result)" />
+    <FunctionImport Name="pa_ConsultarReservacionPorNumeroHabitacion" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarReservacionPorNumeroHabitacion_Result)">
+      <Parameter Name="idHabitacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pa_InactivarHabitacion">
+      <Parameter Name="idHabitacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pa_CrearReservacion">
+      <Parameter Name="idPersona" Mode="In" Type="Int32" />
+      <Parameter Name="idHabitacion" Mode="In" Type="Int32" />
+      <Parameter Name="fechaEntrada" Mode="In" Type="DateTime" />
+      <Parameter Name="fechaSalida" Mode="In" Type="DateTime" />
+      <Parameter Name="numeroAdultos" Mode="In" Type="Int32" />
+      <Parameter Name="numeroNinhos" Mode="In" Type="Int32" />
+      <Parameter Name="totalDiasReservacion" Mode="In" Type="Int32" />
+      <Parameter Name="costoPorCadaAdulto" Mode="In" Type="Decimal" />
+      <Parameter Name="costoPorCadaNinho" Mode="In" Type="Decimal" />
+      <Parameter Name="costoTotal" Mode="In" Type="Decimal" />
+      <Parameter Name="fechaCreacion" Mode="In" Type="DateTime" />
+      <Parameter Name="estado" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarDetalleReservacionPorId" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarDetalleReservacionPorId_Result3)">
+      <Parameter Name="IdReservacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="EditarReservacion">
+      <Parameter Name="idReservacion" Mode="In" Type="Int32" />
+      <Parameter Name="fechaEntrada" Mode="In" Type="DateTime" />
+      <Parameter Name="fechaSalida" Mode="In" Type="DateTime" />
+      <Parameter Name="numeroAdultos" Mode="In" Type="Int32" />
+      <Parameter Name="numeroNinhos" Mode="In" Type="Int32" />
+      <Parameter Name="totalDiasReservacion" Mode="In" Type="Int32" />
+      <Parameter Name="costoPorCadaAdulto" Mode="In" Type="Decimal" />
+      <Parameter Name="costoPorCadaNinho" Mode="In" Type="Decimal" />
+      <Parameter Name="costoTotal" Mode="In" Type="Decimal" />
+      <Parameter Name="fechaModificacion" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="pa_CancelarReservacion">
+      <Parameter Name="idReservacion" Mode="In" Type="Int32" />
+      <Parameter Name="fechaModificacion" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarHabitacionSinReservacion" ReturnType="Collection(String)">
+      <Parameter Name="idHotel" Mode="In" Type="Int32" />
+      <Parameter Name="capacidadMaxima" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarAccionesRealizadasPorId" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarAccionesRealizadasPorId_Result1)">
+      <Parameter Name="IdReservaciones" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarNumerodeHabitaciones" ReturnType="Collection(String)">
+      <Parameter Name="numeroHabitacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pa_ConsultarHabitaciones" ReturnType="Collection(PVI_ProyectoFinalModel.pa_ConsultarHabitaciones_Result4)" />
+  </EntityContainer>
+  <ComplexType Name="pa_ConsultarAccionesRealizadasPorId_Result">
+    <Property Type="DateTime" Name="fechaDeLaAccion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="accionRealizada" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarDetalleReservacionPorId_Result">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="numeroAdultos" Nullable="false" />
+    <Property Type="Int32" Name="numeroNinhos" Nullable="false" />
+    <Property Type="Decimal" Name="costoTotal" Nullable="false" Precision="14" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarHabitaciones_Result">
+    <Property Type="Int32" Name="idHabitacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="capacidadMaxima" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarHoteles_Result">
+    <Property Type="Int32" Name="idHotel" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarPersonas_Result">
+    <Property Type="Int32" Name="idPersona" Nullable="false" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarReservacionesPorId_Result">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="costoTotal" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_Login_Result">
+    <Property Type="Int32" Name="idPersona" Nullable="false" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="150" />
+    <Property Type="Boolean" Name="esEmpleado" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarReservaciones_Result">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="costoTotal" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarReservacionesFiltro_Result">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="costoTotal" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarHabitacionPorId_Result">
+    <Property Type="Int32" Name="idHabitacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="capacidadMaxima" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarDetalleReservacionPorIdB_Result">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="numeroAdultos" Nullable="false" />
+    <Property Type="Int32" Name="numeroNinhos" Nullable="false" />
+    <Property Type="Decimal" Name="costoTotal" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarHabitacionPorId_Result1">
+    <Property Type="Int32" Name="idHotel" Nullable="false" />
+    <Property Type="Int32" Name="idHabitacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="capacidadMaxima" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarReservacionesFiltro_Result1">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="costoTotal" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarReservacionesFiltro_Result2">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="costoTotal" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarReservacionesFiltro_Result3">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Decimal" Name="costoTotal" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarPreciosPorIdHotel_Result">
+    <Property Type="Decimal" Name="costoPorCadaAdulto" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="costoPorCadaNinho" Nullable="false" Precision="10" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarHoteles_Result1">
+    <Property Type="Int32" Name="idHotel" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="Decimal" Name="costoPorCadaAdulto" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="costoPorCadaAdulto1" Nullable="false" Precision="10" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarHoteles_Result2">
+    <Property Type="Int32" Name="idHotel" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="Decimal" Name="costoPorCadaAdulto" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="costoPorCadaNinho" Nullable="false" Precision="10" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarIdDeHabitacion_Result">
+    <Property Type="Int32" Name="idHabitacion" Nullable="false" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="ConsultarUltimaReservacionRealizada_Result">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="Int32" Name="idPersona" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarDetalleReservacionPorId_Result1">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="numeroAdultos" Nullable="false" />
+    <Property Type="Int32" Name="numeroNinhos" Nullable="false" />
+    <Property Type="Decimal" Name="costoPorCadaAdulto" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="costoPorCadaNinho" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarReservacionPorNumeroHabitacion_Result">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="numeroAdultos" Nullable="false" />
+    <Property Type="Int32" Name="numeroNinhos" Nullable="false" />
+    <Property Type="Decimal" Name="costoTotal" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarDetalleReservacionPorId_Result2">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="idHabitacion" Nullable="false" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="numeroAdultos" Nullable="false" />
+    <Property Type="Int32" Name="numeroNinhos" Nullable="false" />
+    <Property Type="Decimal" Name="costoPorCadaAdulto" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="costoPorCadaNinho" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarDetalleReservacionPorId_Result3">
+    <Property Type="Int32" Name="idReservacion" Nullable="false" />
+    <Property Type="Int32" Name="idHotel" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="idHabitacion" Nullable="false" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="fechaEntrada" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaSalida" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="numeroAdultos" Nullable="false" />
+    <Property Type="Int32" Name="numeroNinhos" Nullable="false" />
+    <Property Type="Decimal" Name="costoPorCadaAdulto" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="costoPorCadaNinho" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarAccionesRealizadasPorId_Result1">
+    <Property Type="DateTime" Name="fechaDeLaAccion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="accionRealizada" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="nombreCompleto" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="idPersona" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarHabitaciones_Result1">
+    <Property Type="Int32" Name="idHabitacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="capacidadMaxima" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarHabitaciones_Result2">
+    <Property Type="Int32" Name="idHabitacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="capacidadMaxima" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarHabitaciones_Result3">
+    <Property Type="Int32" Name="idHabitacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="capacidadMaxima" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="pa_ConsultarHabitaciones_Result4">
+    <Property Type="Int32" Name="idHabitacion" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="numeroHabitacion" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="capacidadMaxima" Nullable="false" />
+    <Property Type="String" Name="estado" Nullable="false" MaxLength="1" />
+  </ComplexType>
+</Schema>

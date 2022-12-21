@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PVI_ProyectoFinalModelStoreContainer" CdmEntityContainer="PVI_ProyectoFinalEntities1">
+    <EntitySetMapping Name="Bitacora">
+      <EntityTypeMapping TypeName="PVI_ProyectoFinalModel.Bitacora">
+        <MappingFragment StoreEntitySet="Bitacora">
+          <ScalarProperty Name="idBitacora" ColumnName="idBitacora" />
+          <ScalarProperty Name="idReservacion" ColumnName="idReservacion" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="accionRealizada" ColumnName="accionRealizada" />
+          <ScalarProperty Name="fechaDeLaAccion" ColumnName="fechaDeLaAccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Habitacion">
+      <EntityTypeMapping TypeName="PVI_ProyectoFinalModel.Habitacion">
+        <MappingFragment StoreEntitySet="Habitacion">
+          <ScalarProperty Name="idHabitacion" ColumnName="idHabitacion" />
+          <ScalarProperty Name="idHotel" ColumnName="idHotel" />
+          <ScalarProperty Name="numeroHabitacion" ColumnName="numeroHabitacion" />
+          <ScalarProperty Name="capacidadMaxima" ColumnName="capacidadMaxima" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotel">
+      <EntityTypeMapping TypeName="PVI_ProyectoFinalModel.Hotel">
+        <MappingFragment StoreEntitySet="Hotel">
+          <ScalarProperty Name="idHotel" ColumnName="idHotel" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="costoPorCadaAdulto" ColumnName="costoPorCadaAdulto" />
+          <ScalarProperty Name="costoPorCadaNinho" ColumnName="costoPorCadaNinho" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persona">
+      <EntityTypeMapping TypeName="PVI_ProyectoFinalModel.Persona">
+        <MappingFragment StoreEntitySet="Persona">
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="clave" ColumnName="clave" />
+          <ScalarProperty Name="esEmpleado" ColumnName="esEmpleado" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservacion">
+      <EntityTypeMapping TypeName="PVI_ProyectoFinalModel.Reservacion">
+        <MappingFragment StoreEntitySet="Reservacion">
+          <ScalarProperty Name="idReservacion" ColumnName="idReservacion" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="idHabitacion" ColumnName="idHabitacion" />
+          <ScalarProperty Name="fechaEntrada" ColumnName="fechaEntrada" />
+          <ScalarProperty Name="fechaSalida" ColumnName="fechaSalida" />
+          <ScalarProperty Name="numeroAdultos" ColumnName="numeroAdultos" />
+          <ScalarProperty Name="numeroNinhos" ColumnName="numeroNinhos" />
+          <ScalarProperty Name="totalDiasReservacion" ColumnName="totalDiasReservacion" />
+          <ScalarProperty Name="costoPorCadaAdulto" ColumnName="costoPorCadaAdulto" />
+          <ScalarProperty Name="costoPorCadaNinho" ColumnName="costoPorCadaNinho" />
+          <ScalarProperty Name="costoTotal" ColumnName="costoTotal" />
+          <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
+          <ScalarProperty Name="fechaModificacion" ColumnName="fechaModificacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spCancelarReservacion" FunctionName="PVI_ProyectoFinalModel.Store.spCancelarReservacion" />
+    <FunctionImportMapping FunctionImportName="spConsultarAccionesRealizadasPorId" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarAccionesRealizadasPorId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarAccionesRealizadasPorId_Result">
+          <ScalarProperty Name="fechaDeLaAccion" ColumnName="fechaDeLaAccion" />
+          <ScalarProperty Name="accionRealizada" ColumnName="accionRealizada" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarDetalleReservacionPorId" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarDetalleReservacionPorId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarDetalleReservacionPorId_Result">
+          <ScalarProperty Name="idReservacion" ColumnName="idReservacion" />
+          <ScalarProperty Name="idHotel" ColumnName="idHotel" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idHabitacion" ColumnName="idHabitacion" />
+          <ScalarProperty Name="numeroHabitacion" ColumnName="numeroHabitacion" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="fechaEntrada" ColumnName="fechaEntrada" />
+          <ScalarProperty Name="fechaSalida" ColumnName="fechaSalida" />
+          <ScalarProperty Name="numeroAdultos" ColumnName="numeroAdultos" />
+          <ScalarProperty Name="numeroNinhos" ColumnName="numeroNinhos" />
+          <ScalarProperty Name="costoPorCadaAdulto" ColumnName="costoPorCadaAdulto" />
+          <ScalarProperty Name="costoPorCadaNinho" ColumnName="costoPorCadaNinho" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarDetalleReservacionPorIdB" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarDetalleReservacionPorIdB">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarDetalleReservacionPorIdB_Result">
+          <ScalarProperty Name="idReservacion" ColumnName="idReservacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="numeroHabitacion" ColumnName="numeroHabitacion" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="fechaEntrada" ColumnName="fechaEntrada" />
+          <ScalarProperty Name="fechaSalida" ColumnName="fechaSalida" />
+          <ScalarProperty Name="numeroAdultos" ColumnName="numeroAdultos" />
+          <ScalarProperty Name="numeroNinhos" ColumnName="numeroNinhos" />
+          <ScalarProperty Name="costoTotal" ColumnName="costoTotal" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarHabitacionConReservacion" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarHabitacionConReservacion" />
+    <FunctionImportMapping FunctionImportName="spConsultarHabitaciones" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarHabitaciones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarHabitaciones_Result">
+          <ScalarProperty Name="idHabitacion" ColumnName="idHabitacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="numeroHabitacion" ColumnName="numeroHabitacion" />
+          <ScalarProperty Name="capacidadMaxima" ColumnName="capacidadMaxima" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarHabitacionesPorIdHotel" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarHabitacionesPorIdHotel" />
+    <FunctionImportMapping FunctionImportName="spConsultarHabitacionPorId" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarHabitacionPorId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarHabitacionPorId_Result">
+          <ScalarProperty Name="idHotel" ColumnName="idHotel" />
+          <ScalarProperty Name="idHabitacion" ColumnName="idHabitacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="numeroHabitacion" ColumnName="numeroHabitacion" />
+          <ScalarProperty Name="capacidadMaxima" ColumnName="capacidadMaxima" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarHabitacionSinReservacion" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarHabitacionSinReservacion" />
+    <FunctionImportMapping FunctionImportName="spConsultarHoteles" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarHoteles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarHoteles_Result">
+          <ScalarProperty Name="idHotel" ColumnName="idHotel" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="costoPorCadaAdulto" ColumnName="costoPorCadaAdulto" />
+          <ScalarProperty Name="costoPorCadaNinho" ColumnName="costoPorCadaNinho" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarIdDeHabitacion" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarIdDeHabitacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarIdDeHabitacion_Result">
+          <ScalarProperty Name="idHabitacion" ColumnName="idHabitacion" />
+          <ScalarProperty Name="numeroHabitacion" ColumnName="numeroHabitacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarIdReservacion" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarIdReservacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarIdReservacion_Result">
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="idReservacion" ColumnName="idReservacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarNumerodeHabitaciones" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarNumerodeHabitaciones" />
+    <FunctionImportMapping FunctionImportName="spConsultarPersonas" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarPersonas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarPersonas_Result">
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarPreciosPorIdHotel" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarPreciosPorIdHotel">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarPreciosPorIdHotel_Result">
+          <ScalarProperty Name="costoPorCadaAdulto" ColumnName="costoPorCadaAdulto" />
+          <ScalarProperty Name="costoPorCadaNinho" ColumnName="costoPorCadaNinho" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarReservaciones" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarReservaciones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarReservaciones_Result">
+          <ScalarProperty Name="idReservacion" ColumnName="idReservacion" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="fechaEntrada" ColumnName="fechaEntrada" />
+          <ScalarProperty Name="fechaSalida" ColumnName="fechaSalida" />
+          <ScalarProperty Name="costoTotal" ColumnName="costoTotal" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarReservacionesFiltro" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarReservacionesFiltro">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarReservacionesFiltro_Result">
+          <ScalarProperty Name="idReservacion" ColumnName="idReservacion" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="fechaEntrada" ColumnName="fechaEntrada" />
+          <ScalarProperty Name="fechaSalida" ColumnName="fechaSalida" />
+          <ScalarProperty Name="costoTotal" ColumnName="costoTotal" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarReservacionesPorId" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarReservacionesPorId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarReservacionesPorId_Result">
+          <ScalarProperty Name="idReservacion" ColumnName="idReservacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="fechaEntrada" ColumnName="fechaEntrada" />
+          <ScalarProperty Name="fechaSalida" ColumnName="fechaSalida" />
+          <ScalarProperty Name="costoTotal" ColumnName="costoTotal" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarReservacionPorNumeroHabitacion" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarReservacionPorNumeroHabitacion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarReservacionPorNumeroHabitacion_Result">
+          <ScalarProperty Name="idReservacion" ColumnName="idReservacion" />
+          <ScalarProperty Name="numeroHabitacion" ColumnName="numeroHabitacion" />
+          <ScalarProperty Name="fechaEntrada" ColumnName="fechaEntrada" />
+          <ScalarProperty Name="fechaSalida" ColumnName="fechaSalida" />
+          <ScalarProperty Name="numeroAdultos" ColumnName="numeroAdultos" />
+          <ScalarProperty Name="numeroNinhos" ColumnName="numeroNinhos" />
+          <ScalarProperty Name="costoTotal" ColumnName="costoTotal" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spConsultarUltimaReservacionRealizada" FunctionName="PVI_ProyectoFinalModel.Store.spConsultarUltimaReservacionRealizada">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spConsultarUltimaReservacionRealizada_Result">
+          <ScalarProperty Name="idReservacion" ColumnName="idReservacion" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCrearHabitacion" FunctionName="PVI_ProyectoFinalModel.Store.spCrearHabitacion" />
+    <FunctionImportMapping FunctionImportName="spCrearRegistroBitacora" FunctionName="PVI_ProyectoFinalModel.Store.spCrearRegistroBitacora" />
+    <FunctionImportMapping FunctionImportName="spCrearReservacion" FunctionName="PVI_ProyectoFinalModel.Store.spCrearReservacion" />
+    <FunctionImportMapping FunctionImportName="spEditarHabitacion" FunctionName="PVI_ProyectoFinalModel.Store.spEditarHabitacion" />
+    <FunctionImportMapping FunctionImportName="spEditarReservacion" FunctionName="PVI_ProyectoFinalModel.Store.spEditarReservacion" />
+    <FunctionImportMapping FunctionImportName="spInactivarHabitacion" FunctionName="PVI_ProyectoFinalModel.Store.spInactivarHabitacion" />
+    <FunctionImportMapping FunctionImportName="spLogin" FunctionName="PVI_ProyectoFinalModel.Store.spLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PVI_ProyectoFinalModel.spLogin_Result">
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="esEmpleado" ColumnName="esEmpleado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

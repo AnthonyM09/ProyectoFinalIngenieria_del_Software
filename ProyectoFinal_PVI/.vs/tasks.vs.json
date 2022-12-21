@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-ProyectoFinal_PVI",
+      "appliesTo": "ProyectoFinal_PVI/Data/ProyectoFinal_PVI.edmx",
+      "type": "launch"
+    }
+  ]
+}
